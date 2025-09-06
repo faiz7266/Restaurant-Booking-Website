@@ -1,0 +1,14 @@
+
+{% extends "base.html" %}
+{% block content %}
+<section class="auth-card">
+  <h2>Sign Up</h2>
+  <form method="POST" class="form-grid">
+    <input type="text" name="username" placeholder="Username" required />
+    <input type="email" name="email" placeholder="Email" required />
+    <input type="password" name="password" placeholder="Password" required />
+    <button type="submit">Create Account</button>
+  </form>
+  <p class="muted">Already have an account? <a href="{{ url_for('login') }}">Log in</a></p>
+</section>
+{% endblock %}

@@ -1,0 +1,28 @@
+[
+  {
+    "user": "a@gmail.com",
+    "product": {
+      "id": 4,
+      "owner": "a@gmail.com",
+      "title": "ctfvgybhunji",
+      "category": "Clothing",
+      "description": "sdf",
+      "price": "5421",
+      "image": "static/placeholder.png"
+    },
+    "status": "cart"
+  },
+  {
+    "user": "faizmunshi52@gmail.com",
+    "product": {
+      "id": 3,
+      "owner": "demo@ecofinds.com",
+      "title": "Yoga Mat",
+      "category": "Sports",
+      "description": "Non-slip, barely used.",
+      "price": "499.00",
+      "image": "static/placeholder.png"
+    },
+    "status": "purchased"
+  }
+]

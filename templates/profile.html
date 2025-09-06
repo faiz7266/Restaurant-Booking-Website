@@ -1,0 +1,19 @@
+
+{% extends "base.html" %}
+{% block content %}
+<section class="profile-card">
+  <div class="profile-header">
+    <img class="avatar" src="{{ url_for('static', filename='avatar_placeholder.png') }}" alt="avatar" />
+    <div>
+      <h2>{{ user.username }}</h2>
+      <div class="muted">{{ user.email }}</div>
+    </div>
+  </div>
+  <form method="POST" class="form-grid">
+    <input type="text" name="username" value="{{ user.username }}" placeholder="Username" />
+    <input type="text" name="avatar" value="{{ user.avatar }}" placeholder="Avatar URL (optional)" />
+    <textarea name="bio" placeholder="Bio">{{ user.bio }}</textarea>
+    <button type="submit">Save Changes</button>
+  </form>
+</section>
+{% endblock %}

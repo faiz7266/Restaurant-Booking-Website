@@ -1,0 +1,362 @@
+[
+  {
+    "id": 1,
+    "owner": "demo@ecofinds.com",
+    "title": "Denim Jacket",
+    "category": "Clothing",
+    "description": "Lightly used denim jacket, size M.",
+    "price": "799.00",
+   " image": "static/placeholder.png"
+  },
+  {
+    "id": 2,
+    "owner": "demo@ecofinds.com",
+    "title": "LG 43-inch LED TV",
+    "category": "Electronics",
+    "description": "Great condition, includes cover.",
+    "price": "5466.00",
+    "image": "static/placeholder.png"
+  },
+  {
+    "id": 3,
+    "owner": "demo@ecofinds.com",
+    "title": "Yoga Mat",
+    "category": "Sports",
+    "description": "Non-slip, barely used.",
+    "price": "499.00",
+    "image": "static/placeholder.png"
+  },
+  {
+    "id": 4,
+    "owner": "a@gmail.com",
+    "title": "Jeans",
+    "category": "Clothing",
+    "description": "sdf",
+    "price": "299",
+    "image": "static/placeholder.png"
+  },
+  {
+    "id": 5,
+    "owner": "rajiv@gmail.com",
+    "title": "Samsung Galaxy S21",
+    "category": "Electronics",
+    "description": "Used for 1 year, 128GB storage.",
+    "price": "26000",
+    "image": "static/placeholder.png"
+  },
+  {
+    "id": 6,
+    "owner": "priya@yahoo.com",
+    "title": "Wooden Dining Table",
+    "category": "Furniture",
+    "description": "4-seater, solid wood, excellent condition.",
+    "price": "9500",
+    "image": "static/placeholder.png"
+  },
+  {
+    "id": 7,
+    "owner": "amit@outlook.com",
+    "title": "Hero Splendor Bike",
+    "category": "Vehicles",
+    "description": "2018 model, well maintained, 45k km.",
+    "price": "38000",
+    "image": "static/placeholder.png"
+  },
+  {
+    "id": 8,
+    "owner": "ananya@gmail.com",
+    "title": "LG 43-inch LED TV",
+    "category": "Electronics",
+    "description": "Full HD, used 3 years, remote included.",
+    "price": "13500",
+    "image": "static/placeholder.png"
+  },
+  {
+    "id": 9,
+    "owner": "rohit@gmail.com",
+    "title": "Reebok Running Shoes",
+    "category": "Clothing",
+    "description": "Size 9, barely worn.",
+    "price": "1200",
+    "image": "static/placeholder.png"
+  },
+  {
+    "id": 10,
+    "owner": "megha@yahoo.com",
+    "title": "IFB Washing Machine",
+    "category": "Appliances",
+    "description": "6kg front-load, 4 years old.",
+    "price": "8000",
+    "image": "static/placeholder.png"
+  },
+  {
+    "id": 11,
+    "owner": "suresh@gmail.com",
+    "title": "Office Chair",
+    "category": "Furniture",
+    "description": "Ergonomic, black leather finish.",
+    "price": "2500",
+    "image": "static/placeholder.png"
+  },
+  {
+    "id": 12,
+    "owner": "divya@rediffmail.com",
+    "title": "Cricket Bat",
+    "category": "Sports",
+    "description": "SS brand, lightly used.",
+    "price": "1800",
+    "image": "static/placeholder.png"
+  },
+  {
+    "id": 13,
+    "owner": "neha@gmail.com",
+    "title": "Microwave Oven",
+    "category": "Appliances",
+    "description": "Samsung 23L, good condition.",
+    "price": "3500",
+    "image": "static/placeholder.png"
+  },
+  {
+    "id": 14,
+    "owner": "aditya@yahoo.com",
+    "title": "Apple MacBook Air",
+    "category": "Electronics",
+    "description": "2017 model, 8GB RAM, 256GB SSD.",
+    "price": "38000",
+    "image": "static/placeholder.png"
+  },
+  {
+    "id": 15,
+    "owner": "nisha@gmail.com",
+    "title": "Study Table",
+    "category": "Furniture",
+    "description": "Compact wooden desk for students.",
+    "price": "2200",
+    "image": "static/placeholder.png"
+  },
+  {
+    "id": 16,
+    "owner": "rahul@outlook.com",
+    "title": "Honda Activa 5G",
+    "category": "Vehicles",
+    "description": "2019 model, 20k km, well maintained.",
+    "price": "47000",
+    "image": "static/placeholder.png"
+  },
+  {
+    "id": 17,
+    "owner": "deepa@gmail.com",
+    "title": "Books Collection",
+    "category": "Books",
+    "description": "15 novels including Chetan Bhagat and classics.",
+    "price": "1500",
+    "image": "static/placeholder.png"
+  },
+  {
+    "id": 18,
+    "owner": "vikas@yahoo.com",
+    "title": "Godrej Single Bed",
+    "category": "Furniture",
+    "description": "Metal frame, good condition, includes mattress.",
+    "price": "5500",
+    "image": "static/placeholder.png"
+  },
+  {
+    "id": 19,
+    "owner": "manoj@gmail.com",
+    "title": "Inverter with Battery",
+    "category": "Appliances",
+    "description": "Luminous 900VA with Exide battery.",
+    "price": "12000",
+    "image": "static/placeholder.png"
+  },
+  {
+    "id": 20,
+    "owner": "sonia@rediff.com",
+    "title": "Sofa Set",
+    "category": "Furniture",
+    "description": "3+1+1 beige fabric sofa, 3 years old.",
+    "price": "14500",
+    "image": "static/placeholder.png"
+  },{
+    "id": 21,
+    "owner": "alok@gmail.com",
+    "title": "Nike Sports T-shirt",
+    "category": "Clothing",
+    "description": "Size L, lightly used, breathable fabric.",
+    "price": "700",
+    "image": "static/placeholder.png"
+  },
+  {
+    "id": 22,
+    "owner": "tara@yahoo.com",
+    "title": "Canon DSLR Camera",
+    "category": "Electronics",
+    "description": "EOS 1300D, 18-55mm lens, well maintained.",
+    "price": "18500",
+    "image": "static/placeholder.png"
+  },
+  {
+    "id": 23,
+    "owner": "vikram@gmail.com",
+    "title": "Leather Wallet",
+    "category": "Clothing",
+    "description": "Brown leather, barely used.",
+    "price": "450",
+    "image": "static/placeholder.png"
+  },
+  {
+    "id": 24,
+    "owner": "pranav@outlook.com",
+    "title": "Samsung Refrigerator",
+    "category": "Appliances",
+    "description": "Double door, 250L, 5 years old.",
+    "price": "12000",
+    "image": "static/placeholder.png"
+  },
+  {
+    "id": 25,
+    "owner": "isha@gmail.com",
+    "title": "Puma Running Shoes",
+    "category": "Clothing",
+    "description": "Size 8, lightly used, black color.",
+    "price": "1300",
+    "image": "static/placeholder.png"
+  },
+  {
+    "id": 26,
+    "owner": "raj@rediff.com",
+    "title": "Study Chair",
+    "category": "Furniture",
+    "description": "Ergonomic, adjustable height, good condition.",
+    "price": "1800",
+    "image": "static/placeholder.png"
+  },
+  {
+    "id": 27,
+    "owner": "neeraj@gmail.com",
+    "title": "Trekking Backpack",
+    "category": "Sports",
+    "description": "50L capacity, water-resistant, lightly used.",
+    "price": "1200",
+    "image": "static/placeholder.png"
+  },
+  {
+    "id": 28,
+    "owner": "simran@yahoo.com",
+    "title": "LG Washing Machine",
+    "category": "Appliances",
+    "description": "Front-load, 6.5kg, excellent condition.",
+    "price": "7500",
+    "image": "static/placeholder.png"
+  },
+  {
+    "id": 29,
+    "owner": "rahul@gmail.com",
+    "title": "Wooden Bookshelf",
+    "category": "Furniture",
+    "description": "5-tier, good condition, mahogany finish.",
+    "price": "3000",
+    "image": "static/placeholder.png"
+  },
+  {
+    "id": 30,
+    "owner": "kriti@gmail.com",
+    "title": "Sony Headphones",
+    "category": "Electronics",
+    "description": "Noise-canceling, wired, lightly used.",
+    "price": "1500",
+    "image": "static/placeholder.png"
+  },
+  {
+    "id": 31,
+    "owner": "aman@yahoo.com",
+    "title": "Road Bike",
+    "category": "Sports",
+    "description": "Hercules road bike, good condition.",
+    "price": "5500",
+    "image": "static/placeholder.png"
+  },
+  {
+    "id": 32,
+    "owner": "pallavi@gmail.com",
+    "title": "Microwave Oven",
+    "category": "Appliances",
+    "description": "Bajaj 20L, lightly used.",
+    "price": "2800",
+    "image": "static/placeholder.png"
+  },
+  {
+    "id": 33,
+    "owner": "sahil@gmail.com",
+    "title": "Leather Jacket",
+    "category": "Clothing",
+    "description": "Black, size M, very good condition.",
+    "price": "2200",
+    "image": "static/placeholder.png"
+  },
+  {
+    "id": 34,
+    "owner": "anju@yahoo.com",
+    "title": "iPhone 11",
+    "category": "Electronics",
+    "description": "64GB, black, 2 years old, well maintained.",
+    "price": "25000",
+    "image": "static/placeholder.png"
+  },
+  {
+    "id": 35,
+    "owner": "rohan@gmail.com",
+    "title": "Office Desk",
+    "category": "Furniture",
+    "description": "Wooden, 4 drawers, good condition.",
+    "price": "4500",
+    "image": "static/placeholder.png"
+  },
+  {
+    "id": 36,
+    "owner": "neha@rediff.com",
+    "title": "Bluetooth Speaker",
+    "category": "Electronics",
+    "description": "JBL portable, lightly used, black color.",
+    "price": "2000",
+    "image": "static/placeholder.png"
+  },
+  {
+    "id": 37,
+    "owner": "sumit@gmail.com",
+    "title": "Mountain Bike",
+    "category": "Sports",
+    "description": "Hero MTB, 21-speed, good condition.",
+    "price": "7500",
+    "image": "static/placeholder.png"
+  },
+  {
+    "id": 38,
+    "owner": "ritu@yahoo.com",
+    "title": "Refrigerator",
+    "category": "Appliances",
+    "description": "Godrej 190L, 4 years old, working fine.",
+    "price": "8500",
+    "image": "static/placeholder.png"
+  },
+  {
+    "id": 39,
+    "owner": "ankit@gmail.com",
+    "title": "Formal Shoes",
+    "category": "Clothing",
+    "description": "Size 10, brown leather, lightly used.",
+    "price": "1000",
+    "image": "static/placeholder.png"
+  },
+  {
+    "id": 40,
+    "owner": "kritika@gmail.com",
+    "title": "Bookshelf",
+    "category": "Furniture",
+    "description": "4-tier, pinewood, lightly used.",
+    "price": "2000",
+    "image": "static/placeholder.png"
+    
+  }
+]

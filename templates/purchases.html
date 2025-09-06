@@ -1,0 +1,18 @@
+
+{% extends "base.html" %}
+{% block content %}
+<h2>Previous Purchases</h2>
+<section class="list">
+  {% for item in items %}
+    <div class="list-row">
+      <div class="list-col">
+        <strong>{{ item.product.title }}</strong>
+        <div class="muted">Category: {{ item.product.category }}</div>
+      </div>
+      <div class="list-col price">₹{{ item.product.price }}</div>
+    </div>
+  {% else %}
+    <p class="muted">No past purchases yet.</p>
+  {% endfor %}
+</section>
+{% endblock %}

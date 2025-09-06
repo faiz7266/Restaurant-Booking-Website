@@ -1,0 +1,826 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EcoFinds - Sustainable Marketplace Login</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* ===== VARIABLES & RESET ===== */
+        :root {
+            --primary: #2E8B57;      /* Sustainable green - primary color */
+            --primary-dark: #1F6B48;
+            --primary-light: #3DA76A;
+            --secondary: #F9A826;    /* Accent color - for calls to action */
+            --neutral-light: #F5F5F5;
+            --neutral: #E0E0E0;
+            --neutral-dark: #616161;
+            --text-dark: #212121;
+            --text-light: #FAFAFA;
+            --error: #D32F2F;
+            --success: #388E3C;
+            --warning: #F57C00;
+            --info: #1976D2;
+            --shadow-sm: 0 2px 4px rgba(0,0,0,0.1);
+            --shadow-md: 0 4px 8px rgba(0,0,0,0.12);
+            --shadow-lg: 0 8px 16px rgba(0,0,0,0.15);
+            --border-radius: 8px;
+            --border-radius-lg: 12px;
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: var(--neutral-light);
+            color: var(--text-dark);
+            line-height: 1.6;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        /* ===== TYPOGRAPHY ===== */
+        h1, h2, h3, h4, h5, h6 {
+            font-weight: 600;
+            margin-bottom: 1rem;
+            color: var(--primary-dark);
+        }
+
+        h1 {
+            font-size: 2.5rem;
+        }
+
+        h2 {
+            font-size: 2rem;
+        }
+
+        h3 {
+            font-size: 1.75rem;
+        }
+
+        h4 {
+            font-size: 1.5rem;
+        }
+
+        p {
+            margin-bottom: 1rem;
+        }
+
+        a {
+            color: var(--primary);
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        a:hover {
+            color: var(--primary-dark);
+        }
+
+        /* ===== LAYOUT & CONTAINERS ===== */
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+
+        .app-container {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .main-content {
+            flex: 1;
+            padding: 2rem 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .section {
+            margin-bottom: 2.5rem;
+        }
+
+        .card {
+            background: white;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow-sm);
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            transition: var(--transition);
+        }
+
+        .card:hover {
+            box-shadow: var(--shadow-md);
+            transform: translateY(-2px);
+        }
+
+        .card-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1rem;
+            padding-bottom: 0.75rem;
+            border-bottom: 1px solid var(--neutral);
+        }
+
+        /* ===== HEADER & NAVIGATION ===== */
+        .app-header {
+            background-color: white;
+            box-shadow: var(--shadow-sm);
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            font-weight: 700;
+            font-size: 1.5rem;
+            color: var(--primary);
+        }
+
+        .logo-icon {
+            color: var(--primary);
+        }
+
+        .nav-menu {
+            display: flex;
+            gap: 1.5rem;
+            align-items: center;
+        }
+
+        .nav-link {
+            color: var(--text-dark);
+            font-weight: 500;
+            padding: 0.5rem 0.75rem;
+            border-radius: var(--border-radius);
+        }
+
+        .nav-link:hover {
+            background-color: var(--neutral-light);
+            color: var(--primary);
+        }
+
+        .nav-link.active {
+            background-color: var(--primary-light);
+            color: white;
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: var(--primary);
+        }
+
+        /* ===== LOGIN FORM ===== */
+        .login-container {
+            width: 100%;
+            max-width: 450px;
+            padding: 2rem;
+        }
+
+        .login-card {
+            background: white;
+            border-radius: var(--border-radius-lg);
+            box-shadow: var(--shadow-lg);
+            padding: 2.5rem;
+            text-align: center;
+        }
+
+        .login-icon {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            background-color: var(--primary-light);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1.5rem;
+            color: white;
+            font-size: 2.5rem;
+        }
+
+        .login-title {
+            margin-bottom: 0.5rem;
+        }
+
+        .login-subtitle {
+            color: var(--neutral-dark);
+            margin-bottom: 2rem;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+            text-align: left;
+        }
+
+        .form-label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+            color: var(--text-dark);
+        }
+
+        .form-input, .form-select, .form-textarea {
+            width: 100%;
+            padding: 0.75rem 1rem;
+            border: 1px solid var(--neutral);
+            border-radius: var(--border-radius);
+            font-size: 1rem;
+            transition: var(--transition);
+        }
+
+        .form-input:focus, .form-select:focus, .form-textarea:focus {
+            outline: none;
+            border-color: var(--primary);
+            box-shadow: 0 0 0 3px rgba(46, 139, 87, 0.2);
+        }
+
+        .input-with-icon {
+            position: relative;
+        }
+
+        .input-icon {
+            position: absolute;
+            left: 1rem;
+            top: 50%;
+            transform: translateY(-50%);
+            color: var(--neutral-dark);
+        }
+
+        .input-with-icon .form-input {
+            padding-left: 3rem;
+        }
+
+        .form-error {
+            color: var(--error);
+            font-size: 0.875rem;
+            margin-top: 0.25rem;
+            display: none;
+        }
+
+        .form-options {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1.5rem;
+        }
+
+        .remember-me {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .form-checkbox {
+            width: 18px;
+            height: 18px;
+            accent-color: var(--primary);
+        }
+
+        /* ===== BUTTONS ===== */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            padding: 0.75rem 1.5rem;
+            border: none;
+            border-radius: var(--border-radius);
+            font-size: 1rem;
+            font-weight: 500;
+            cursor: pointer;
+            transition: var(--transition);
+            text-align: center;
+            width: 100%;
+        }
+
+        .btn-primary {
+            background-color: var(--primary);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background-color: var(--primary-dark);
+            transform: translateY(-2px);
+        }
+
+        .btn-secondary {
+            background-color: var(--secondary);
+            color: white;
+        }
+
+        .btn-secondary:hover {
+            background-color: #E59400;
+            transform: translateY(-2px);
+        }
+
+        .btn-outline {
+            background-color: transparent;
+            border: 1px solid var(--primary);
+            color: var(--primary);
+        }
+
+        .btn-outline:hover {
+            background-color: var(--primary);
+            color: white;
+        }
+
+        .btn-danger {
+            background-color: var(--error);
+            color: white;
+        }
+
+        .btn-danger:hover {
+            background-color: #B71C1C;
+        }
+
+        .btn-sm {
+            padding: 0.5rem 1rem;
+            font-size: 0.875rem;
+        }
+
+        .btn-lg {
+            padding: 1rem 2rem;
+            font-size: 1.125rem;
+        }
+
+        .btn-google {
+            background-color: white;
+            color: #757575;
+            border: 1px solid var(--neutral);
+            margin-top: 1rem;
+        }
+
+        .btn-google:hover {
+            background-color: #f5f5f5;
+            transform: translateY(-2px);
+        }
+
+        /* ===== DIVIDER ===== */
+        .divider {
+            display: flex;
+            align-items: center;
+            margin: 1.5rem 0;
+            color: var(--neutral-dark);
+        }
+
+        .divider::before, .divider::after {
+            content: "";
+            flex: 1;
+            height: 1px;
+            background-color: var(--neutral);
+        }
+
+        .divider span {
+            padding: 0 1rem;
+            font-size: 0.875rem;
+        }
+
+        /* ===== SIGNUP PROMPT ===== */
+        .signup-prompt {
+            margin-top: 2rem;
+            padding: 1.5rem;
+            background-color: var(--neutral-light);
+            border-radius: var(--border-radius);
+            text-align: center;
+        }
+
+        /* ===== FLASH MESSAGES ===== */
+        .flash-messages {
+            position: fixed;
+            top: 90px;
+            right: 20px;
+            z-index: 1000;
+            max-width: 400px;
+        }
+
+        .flash-message {
+            padding: 1rem 1.5rem;
+            margin-bottom: 0.75rem;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow-md);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            animation: slideIn 0.3s ease-out;
+        }
+
+        .flash-success {
+            background-color: var(--success);
+            color: white;
+        }
+
+        .flash-danger {
+            background-color: var(--error);
+            color: white;
+        }
+
+        .flash-info {
+            background-color: var(--info);
+            color: white;
+        }
+
+        .flash-warning {
+            background-color: var(--warning);
+            color: white;
+        }
+
+        .flash-close {
+            background: none;
+            border: none;
+            color: inherit;
+            cursor: pointer;
+            margin-left: 1rem;
+        }
+
+        /* ===== FOOTER ===== */
+        .app-footer {
+            background-color: var(--primary-dark);
+            color: white;
+            padding: 3rem 0 1.5rem;
+            margin-top: auto;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .footer-logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .footer-description {
+            margin-bottom: 1.5rem;
+        }
+
+        .footer-heading {
+            font-size: 1.125rem;
+            font-weight: 600;
+            margin-bottom: 1.25rem;
+        }
+
+        .footer-links {
+            list-style: none;
+            padding: 0;
+        }
+
+        .footer-link {
+            margin-bottom: 0.75rem;
+        }
+
+        .footer-link a {
+            color: var(--neutral-light);
+            transition: var(--transition);
+        }
+
+        .footer-link a:hover {
+            color: var(--secondary);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 1.5rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        /* ===== UTILITY CLASSES ===== */
+        .text-center {
+            text-align: center;
+        }
+
+        .text-right {
+            text-align: right;
+        }
+
+        .mt-1 { margin-top: 0.5rem; }
+        .mt-2 { margin-top: 1rem; }
+        .mt-3 { margin-top: 1.5rem; }
+        .mt-4 { margin-top: 2rem; }
+        .mt-5 { margin-top: 3rem; }
+
+        .mb-1 { margin-bottom: 0.5rem; }
+        .mb-2 { margin-bottom: 1rem; }
+        .mb-3 { margin-bottom: 1.5rem; }
+        .mb-4 { margin-bottom: 2rem; }
+        .mb-5 { margin-bottom: 3rem; }
+
+        .hidden {
+            display: none;
+        }
+
+        /* ===== RESPONSIVE DESIGN ===== */
+        @media (max-width: 768px) {
+            .nav-menu {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background: white;
+                flex-direction: column;
+                padding: 1.5rem;
+                box-shadow: var(--shadow-md);
+            }
+            
+            .nav-menu.open {
+                display: flex;
+            }
+            
+            .mobile-menu-btn {
+                display: block;
+            }
+            
+            .login-card {
+                padding: 1.5rem;
+            }
+            
+            .form-options {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 1rem;
+            }
+
+            .flash-messages {
+                left: 20px;
+                right: 20px;
+                max-width: none;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .login-container {
+                padding: 1rem;
+            }
+        }
+
+        /* ===== ANIMATIONS ===== */
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        .fade-in {
+            animation: fadeIn 0.5s ease-in;
+        }
+
+        @keyframes slideIn {
+            from { transform: translateX(100px); opacity: 0; }
+            to { transform: translateX(0); opacity: 1; }
+        }
+
+        .slide-in {
+            animation: slideIn 0.3s ease-out;
+        }
+
+        @keyframes slideOut {
+            from { transform: translateX(0); opacity: 1; }
+            to { transform: translateX(100px); opacity: 0; }
+        }
+
+        .slide-out {
+            animation: slideOut 0.3s ease-in;
+        }
+
+        /* ===== ICONS ===== */
+        .icon {
+            display: inline-block;
+            width: 24px;
+            height: 24px;
+            stroke-width: 0;
+            stroke: currentColor;
+            fill: currentColor;
+        }
+    </style>
+</head>
+<body>
+    <div class="app-container">
+        <!-- Flash Messages -->
+        <div class="flash-messages">
+            <!-- Flash messages will be inserted here by JavaScript -->
+        </div>
+
+        <header class="app-header">
+            <div class="container header-content">
+                <a href="/" class="logo">
+                    <span class="icon logo-icon">♻️</span>
+                    <span>EcoFinds</span>
+                </a>
+                
+                <button class="mobile-menu-btn">☰</button>
+                
+                <nav class="nav-menu">
+                    <a href="/" class="nav-link">Home</a>
+                    <a href="/dashboard" class="nav-link">Browse</a>
+                    <a href="/login" class="nav-link active">Login</a>
+                    <a href="/signup" class="nav-link">Sign Up</a>
+                </nav>
+            </div>
+        </header>
+
+        <main class="main-content">
+            <div class="login-container">
+                <div class="login-card slide-in">
+                    <div class="login-icon">
+                        <i class="fas fa-leaf"></i>
+                    </div>
+                    
+                    <h2 class="login-title">Welcome Back</h2>
+                    <p class="login-subtitle">Sign in to your EcoFinds account</p>
+                    
+                    <form id="login-form" method="POST" action="/login">
+                        <div class="form-group">
+                            <label for="email" class="form-label">Email Address</label>
+                            <div class="input-with-icon">
+                                <i class="fas fa-envelope input-icon"></i>
+                                <input type="email" id="email" name="email" class="form-input" placeholder="Enter your email" required>
+                            </div>
+                            <div class="form-error" id="email-error">Please enter a valid email address</div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="password" class="form-label">Password</label>
+                            <div class="input-with-icon">
+                                <i class="fas fa-lock input-icon"></i>
+                                <input type="password" id="password" name="password" class="form-input" placeholder="Enter your password" required>
+                            </div>
+                            <div class="form-error" id="password-error">Password must be at least 8 characters</div>
+                        </div>
+                        
+                        <div class="form-options">
+                            <label class="remember-me">
+                                <input type="checkbox" class="form-checkbox" id="remember" name="remember">
+                                <span>Remember me</span>
+                            </label>
+                            
+                            <a href="#" class="text-right">Forgot Password?</a>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary btn-lg">Sign In</button>
+                    </form>
+                    
+                    <div class="divider">
+                        <span>Or continue with</span>
+                    </div>
+                    
+                    <button class="btn btn-google">
+                        <i class="fab fa-google"></i>
+                        Sign in with Google
+                    </button>
+                    
+                    <div class="signup-prompt">
+                        <p>Don't have an account? <a href="/signup">Join EcoFinds</a></p>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <footer class="app-footer">
+            <div class="container">
+                <div class="footer-content">
+                    <div>
+                        <div class="footer-logo">
+                            <span class="icon logo-icon">♻️</span>
+                            <span>EcoFinds</span>
+                        </div>
+                        <p class="footer-description">Empowering sustainable consumption through a second-hand marketplace.</p>
+                    </div>
+                    
+                    <div>
+                        <h4 class="footer-heading">Quick Links</h4>
+                        <ul class="footer-links">
+                            <li class="footer-link"><a href="/">Home</a></li>
+                            <li class="footer-link"><a href="/dashboard">Browse Items</a></li>
+                            <li class="footer-link"><a href="/add">Sell Items</a></li>
+                            <li class="footer-link"><a href="/dashboard">My Account</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div>
+                        <h4 class="footer-heading">Categories</h4>
+                        <ul class="footer-links">
+                            <li class="footer-link"><a href="/dashboard?category=Clothing">Clothing</a></li>
+                            <li class="footer-link"><a href="/dashboard?category=Electronics">Electronics</a></li>
+                            <li class="footer-link"><a href="/dashboard?category=Furniture">Furniture</a></li>
+                            <li class="footer-link"><a href="/dashboard?category=Books">Books</a></li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="footer-bottom">
+                    <p>&copy; 2023 EcoFinds - Sustainable Second-Hand Marketplace. All rights reserved.</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        // Mobile menu toggle
+        document.querySelector('.mobile-menu-btn').addEventListener('click', function() {
+            document.querySelector('.nav-menu').classList.toggle('open');
+        });
+
+        // Form validation
+        document.getElementById('login-form').addEventListener('submit', function(e) {
+            let isValid = true;
+            const email = document.getElementById('email');
+            const password = document.getElementById('password');
+            const emailError = document.getElementById('email-error');
+            const passwordError = document.getElementById('password-error');
+            
+            // Reset errors
+            emailError.style.display = 'none';
+            passwordError.style.display = 'none';
+            
+            // Validate email
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailRegex.test(email.value)) {
+                emailError.style.display = 'block';
+                isValid = false;
+            }
+            
+            // Validate password
+            if (password.value.length < 8) {
+                passwordError.style.display = 'block';
+                isValid = false;
+            }
+            
+            if (!isValid) {
+                e.preventDefault();
+            }
+        });
+
+        // Function to show flash messages
+        function showFlashMessage(message, category) {
+            const flashContainer = document.querySelector('.flash-messages');
+            const messageDiv = document.createElement('div');
+            messageDiv.className = `flash-message flash-${category}`;
+            messageDiv.innerHTML = `
+                <span>${message}</span>
+                <button class="flash-close">&times;</button>
+            `;
+            
+            flashContainer.appendChild(messageDiv);
+            
+            // Add click event to close button
+            messageDiv.querySelector('.flash-close').addEventListener('click', function() {
+                messageDiv.classList.add('slide-out');
+                setTimeout(() => {
+                    messageDiv.remove();
+                }, 300);
+            });
+            
+            // Auto remove after 5 seconds
+            setTimeout(() => {
+                if (messageDiv.parentNode) {
+                    messageDiv.classList.add('slide-out');
+                    setTimeout(() => {
+                        messageDiv.remove();
+                    }, 300);
+                }
+            }, 5000);
+        }
+
+        // Check for URL parameters to simulate flash messages for demo
+        const urlParams = new URLSearchParams(window.location.search);
+        const message = urlParams.get('message');
+        const category = urlParams.get('category');
+        
+        if (message && category) {
+            showFlashMessage(decodeURIComponent(message), category);
+        }
+
+        // Demo flash messages for testing
+        // showFlashMessage("Login successful! Welcome to EcoFinds.", "success");
+        // showFlashMessage("Invalid email or password.", "danger");
+    </script>
+</body>
+</html>

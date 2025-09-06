@@ -1,0 +1,28 @@
+
+{% extends "base.html" %}
+{% block content %}
+<h2>My Cart</h2>
+<section class="grid">
+  {% for i in range(items|length) %}
+    {% set item = items[i] %}
+    <article class="card">
+      <img src="{{ url_for('static', filename='placeholder.png') }}" alt="image" />
+      <div class="card-body">
+        <h3>{{ item.product.title }}</h3>
+        <p class="price">₹{{ item.product.price }}</p>
+      </div>
+      <div class="card-actions">
+        <a class="danger" href="{{ url_for('remove_from_cart', index=i) }}">Remove</a>
+      </div>
+    </article>
+  {% else %}
+    <p class="muted">Your cart is empty.</p>
+  {% endfor %}
+</section>
+{% if items %}
+  <div class="checkout-bar">
+    <div>Total: <strong>₹{{ '%.2f'|format(total) }}</strong></div>
+    <a class="button" href="{{ url_for('purchase') }}">Purchase</a>
+  </div>
+{% endif %}
+{% endblock %}

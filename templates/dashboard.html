@@ -1,0 +1,35 @@
+
+{% extends "base.html" %}
+{% block content %}
+<section class="toolbar">
+  <form method="GET" action="{{ url_for('dashboard') }}" class="filters">
+    <input type="text" name="q" placeholder="Search by title..." value="{{ q or '' }}" />
+    <select name="category">
+      <option value="">All Categories</option>
+      {% for c in categories %}
+        <option value="{{ c }}" {% if selected_category==c %}selected{% endif %}>{{ c }}</option>
+      {% endfor %}
+    </select>
+    <button type="submit">Search</button>
+  </form>
+  <a class="button" href="{{ url_for('add_product') }}">+ Add Product</a>
+</section>
+
+<section class="grid">
+  {% for p in products %}
+    <article class="card">
+      <img src="{{ url_for('static', filename='placeholder.png') }}" alt="image" />
+      <div class="card-body">
+        <h3>{{ p.title }}</h3>
+        <p class="price">₹{{ p.price }}</p>
+      </div>
+      <div class="card-actions">
+        <a href="{{ url_for('product_detail', pid=p.id) }}">View</a>
+        <a href="{{ url_for('add_to_cart', pid=p.id) }}">Add to Cart</a>
+      </div>
+    </article>
+  {% else %}
+    <p class="muted">No products found.</p>
+  {% endfor %}
+</section>
+{% endblock %}

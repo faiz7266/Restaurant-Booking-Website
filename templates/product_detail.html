@@ -1,0 +1,21 @@
+
+{% extends "base.html" %}
+{% block content %}
+<section class="detail-card">
+  <img class="detail-img" src="{{ url_for('static', filename='placeholder.png') }}" alt="image" />
+  <div class="detail-info">
+    <h2>{{ product.title }}</h2>
+    <p class="price">₹{{ product.price }}</p>
+    <p><strong>Category:</strong> {{ product.category }}</p>
+    <p>{{ product.description }}</p>
+    <div class="detail-actions">
+      <a class="button" href="{{ url_for('add_to_cart', pid=product.id) }}">Add to Cart</a>
+      <a class="button outline" href="{{ url_for('dashboard') }}">Back</a>
+    </div>
+    <div class="seller">
+      <h4>Seller</h4>
+      <p>{{ owner.username }} ({{ owner.email }})</p>
+    </div>
+  </div>
+</section>
+{% endblock %}
