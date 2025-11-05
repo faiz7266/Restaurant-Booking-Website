@@ -24,5 +24,122 @@
       "image": "static/placeholder.png"
     },
     "status": "purchased"
+  },
+  {
+    "user": "faizmunshi52@gmail.com",
+    "product": {
+      "id": 1,
+      "owner": "demo@ecofinds.com",
+      "title": "Denim Jacket",
+      "category": "Clothing",
+      "description": "Lightly used denim jacket, size M.",
+      "price": "799.00",
+      " image": "static/placeholder.png"
+    },
+    "status": "purchased"
+  },
+  {
+    "user": "faizmunshi52@gmail.com",
+    "product": {
+      "id": 7,
+      "owner": "amit@outlook.com",
+      "title": "Hero Splendor Bike",
+      "category": "Vehicles",
+      "description": "2018 model, well maintained, 45k km.",
+      "price": "38000",
+      "image": "static/placeholder.png"
+    },
+    "status": "purchased"
+  },
+  {
+    "user": "faizmunshi52@gmail.com",
+    "product": {
+      "id": 6,
+      "owner": "priya@yahoo.com",
+      "title": "Wooden Dining Table",
+      "category": "Furniture",
+      "description": "4-seater, solid wood, excellent condition.",
+      "price": "9500",
+      "image": "static/placeholder.png"
+    },
+    "status": "purchased"
+  },
+  {
+    "user": "faizmunshi52@gmail.com",
+    "product": {
+      "id": 1,
+      "owner": "demo@ecofinds.com",
+      "title": "Denim Jacket",
+      "category": "Clothing",
+      "description": "Lightly used denim jacket, size M.",
+      "price": "799.00",
+      " image": "static/placeholder.png"
+    },
+    "status": "purchased"
+  },
+  {
+    "user": "faizmunshi52@gmail.com",
+    "product": {
+      "id": 3,
+      "owner": "demo@ecofinds.com",
+      "title": "Yoga Mat",
+      "category": "Sports",
+      "description": "Non-slip, barely used.",
+      "price": "499.00",
+      "image": "static/placeholder.png"
+    },
+    "status": "purchased"
+  },
+  {
+    "user": "faizmunshi52@gmail.com",
+    "product": {
+      "id": 3,
+      "owner": "demo@ecofinds.com",
+      "title": "Yoga Mat",
+      "category": "Sports",
+      "description": "Non-slip, barely used.",
+      "price": "499.00",
+      "image": "static/placeholder.png"
+    },
+    "status": "purchased"
+  },
+  {
+    "user": "faizmunshi52@gmail.com",
+    "product": {
+      "id": 1,
+      "owner": "demo@ecofinds.com",
+      "title": "Denim Jacket",
+      "category": "Clothing",
+      "description": "Lightly used denim jacket, size M.",
+      "price": "799.00",
+      " image": "static/placeholder.png"
+    },
+    "status": "purchased"
+  },
+  {
+    "user": "faizmunshi52@gmail.com",
+    "product": {
+      "id": 2,
+      "owner": "demo@ecofinds.com",
+      "title": "LG 43-inch LED TV",
+      "category": "Electronics",
+      "description": "Great condition, includes cover.",
+      "price": "5466.00",
+      "image": "static/placeholder.png"
+    },
+    "status": "purchased"
+  },
+  {
+    "user": "faizmunshi52@gmail.com",
+    "product": {
+      "id": 3,
+      "owner": "demo@ecofinds.com",
+      "title": "Yoga Mat",
+      "category": "Sports",
+      "description": "Non-slip, barely used.",
+      "price": "499.00",
+      "image": "static/placeholder.png"
+    },
+    "status": "purchased"
   }
 ]

@@ -6,7 +6,7 @@
     "category": "Clothing",
     "description": "Lightly used denim jacket, size M.",
     "price": "799.00",
-   " image": "static/placeholder.png"
+    " image": "static\\1.jpg"
   },
   {
     "id": 2,
@@ -178,7 +178,8 @@
     "description": "3+1+1 beige fabric sofa, 3 years old.",
     "price": "14500",
     "image": "static/placeholder.png"
-  },{
+  },
+  {
     "id": 21,
     "owner": "alok@gmail.com",
     "title": "Nike Sports T-shirt",
@@ -357,6 +358,14 @@
     "description": "4-tier, pinewood, lightly used.",
     "price": "2000",
     "image": "static/placeholder.png"
-    
+  },
+  {
+    "id": 41,
+    "owner": "faizmunshi52@gmail.com",
+    "title": "Lenovo Legion 7i",
+    "category": "Electronics",
+    "description": "One of the best Gaming laptops",
+    "price": "150000",
+    "image": "static/placeholder.png"
   }
 ]
